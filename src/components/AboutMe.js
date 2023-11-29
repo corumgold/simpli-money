@@ -7,34 +7,6 @@ const AboutMe = () => {
       <>
         <div className="profile-picture">
           <img
-            src={process.env.PUBLIC_URL + "/images/m-profile-photo.png"}
-            alt="profile"
-          />
-          <h4>Marguerite Gold</h4>
-          <h5>Co-Founder & Head Trainer</h5>
-        </div>
-        <div id="about-me-block">
-          <div className="about-me-entry">
-            Marguerite is a seasoned dog trainer with over 7 years of expertise
-            in obedience, behavior modification, and aggression rehab. As an AKC
-            Certified Trainer and IACP Associate Member, she offers tailored
-            solutions that bring peace and confidence to both dogs and their
-            owners.
-          </div>
-          <div className="about-me-entry">
-            <strong>Credentials & Specialties</strong>
-            <ul>
-              <li>AKC Certified Dog Trainer</li>
-              <li>AKC Fit Dog Instructor</li>
-              <li>IACP Associate Member</li>
-              <li>Obedience Training</li>
-              <li>Behavior Modification</li>
-              <li>Aggression Rehabilitation</li>
-            </ul>
-          </div>
-        </div>
-        <div className="profile-picture">
-          <img
             src={process.env.PUBLIC_URL + "/images/profile-photo.png"}
             alt="profile"
           />

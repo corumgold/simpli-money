@@ -15,7 +15,7 @@
   justify-content: center;
   padding: 1rem;
   height: 100dvh;
-  background-color: white;
+  background-color: #F4F4F4;
 }
 @media screen and (max-width: 768px) {
   .hero {
@@ -33,10 +33,8 @@
     font-size: 2rem;
   }
 }
-@media screen and (max-width: 768px) {
-}
 .intro span {
-  color: #ffd700;
+  color: #008080;
   font-weight: bold;
   font-family: "Raleway", sans-serif;
 }
@@ -59,15 +57,13 @@
 .intro h1 {
   font-size: 7rem;
   font-family: "Raleway", sans-serif;
-  color: #ffd700;
+  color: #008080;
   animation: fadeIn 2s;
 }
 @media screen and (max-width: 1200px) {
   .intro h1 {
     font-size: 4rem;
   }
-}
-@media screen and (max-width: 768px) {
 }
 .big-header {
   font-size: 7rem;
@@ -88,11 +84,11 @@
   }
 }
 h2.big-header {
-  color: #414040;
+  color: #333333;
   font-family: "Raleway", sans-serif;
 }
 .about-me {
-  background-color: white;
+  background-color: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -107,8 +103,8 @@ h2.big-header {
   margin-top: 2em;
 }
 .profile-picture img {
-  border: 10px solid #ffd700;
-  background-color: white;
+  border: 10px solid #008080;
+  background-color: #F4F4F4;
   border-radius: 100%;
   margin-bottom: 2rem;
   width: 300px;
@@ -119,21 +115,17 @@ h2.big-header {
   }
 }
 #about-me-block {
-  background-color: white;
+  background-color: #F4F4F4;
   border-radius: 25px;
-  border: 3px solid #ffd700;
+  border: 3px solid #008080;
   margin-bottom: 3em;
 }
 .about-me-entry {
   padding: 1rem 2rem;
   font-size: 1.5rem;
-  color: #14213d;
+  color: #666666;
   max-width: 800px;
   flex: 1 1 0;
-}
-@media screen and (max-width: 768px) {
-}
-@media screen and (max-width: 480px) {
 }
 .about-me-entry ul {
   margin-left: 2em;
@@ -154,7 +146,7 @@ h2.big-header {
 h3 {
   font-size: 4rem;
   font-family: "Raleway", sans-serif;
-  color: #ffd700;
+  color: #008080;
   margin-bottom: 1em;
 }
 @media screen and (max-width: 800px), screen and (max-height: 400px) {
@@ -164,7 +156,7 @@ h3 {
 }
 h3:after {
   content: " ";
-  border: 4px solid #14213d;
+  border: 4px solid #666666;
   display: block;
   margin: 0 auto;
   margin-top: 30px;
@@ -173,7 +165,7 @@ h3:after {
 .about-me h4 {
   font-size: 3rem;
   font-family: "Raleway", sans-serif;
-  color: #ffd700;
+  color: #008080;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -186,7 +178,7 @@ h3:after {
 .about-me h5 {
   font-size: 2rem;
   font-family: "Raleway", sans-serif;
-  color: #14213d;
+  color: #666666;
   text-align: center;
   display: flex;
   align-items: center;
@@ -233,16 +225,15 @@ h3:after {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  font-size: 1rem;
   max-width: 800px;
 }
 .project-content {
   padding: 2rem;
   line-height: 2rem;
-  background-color: white;
-  color: #14213d;
+  background-color: #FFFFFF;
+  color: #666666;
   border-radius: 25px;
-  border: 3px solid #ffd700;
+  border: 3px solid #008080;
 }
 @media screen and (max-width: 480px) {
   .project-content {
@@ -270,7 +261,7 @@ h3:after {
   justify-content: center;
   padding: 0.5rem;
   margin: 8px;
-  background-color: white;
+  background-color: #FFFFFF;
   border-radius: 10px;
   font: inherit;
   font-weight: 700;
@@ -302,8 +293,8 @@ h3:after {
   }
 }
 .tool {
-  background-color: #ffd700;
-  color: #414040;
+  background-color: #008080;
+  color: #333333;
   font-weight: bold;
   margin: 0.5rem;
   padding: 0 0.5rem;
@@ -385,7 +376,7 @@ h3:after {
   width: 100vw;
   z-index: 1;
   justify-content: space-around;
-  background-color: #ffd700;
+  background-color: #008080;
   min-height: 6vh;
 }
 .brand-title {
@@ -411,7 +402,7 @@ h3:after {
   transition: 200ms;
 }
 .nav-links a:hover {
-  color: white;
+  color: #FFFFFF;
 }
 .nav-icon {
   width: 15px;
@@ -423,7 +414,7 @@ h3:after {
 .burger div {
   width: 25px;
   height: 3px;
-  background-color: #414040;
+  background-color: #333333;
   margin: 5px;
   transition: all 0.3s ease;
 }
@@ -436,7 +427,7 @@ h3:after {
     right: 0px;
     height: 94vh;
     top: 6vh;
-    background: #ffd700;
+    background: #008080;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -482,10 +473,10 @@ h3:after {
   justify-content: center;
   flex-direction: column;
   padding: 6rem 2rem;
-  background-color: white;
+  background-color: #FFFFFF;
 }
 #form-page h2 {
-  border-bottom: 1px solid #ffd700;
+  border-bottom: 1px solid #008080;
   color: #3d3d3d;
   font-size: 20px;
   font-weight: 600;
@@ -503,7 +494,7 @@ h3:after {
   max-width: 500px;
   padding: 30px 50px;
   border-radius: 25px;
-  border: 3px solid #ffd700;
+  border: 3px solid #008080;
   margin-bottom: 3em;
 }
 #consult-form input {
@@ -529,13 +520,13 @@ h3:after {
   font-size: 18px;
   font-weight: bold;
   border: none;
-  background-color: #ffd700;
+  background-color: #008080;
   padding: 0.5em;
   cursor: pointer;
 }
 #consult-form button:hover {
   transition: 200ms;
-  color: white;
+  color: #F4F4F4;
 }
 .showModal {
   width: 60vw;
@@ -546,7 +537,7 @@ h3:after {
   padding: 3em;
   font-size: 3rem;
   height: 94vh;
-  background-color: #ffd700;
+  background-color: #008080;
   position: fixed;
   bottom: 0;
   z-index: 1;
@@ -563,14 +554,14 @@ h3:after {
 .showModal button {
   background: none;
   color: inherit;
-  border: 4px solid white;
+  border: 4px solid #F4F4F4;
   border-radius: 8px;
   padding: 0.5em;
   font: inherit;
   cursor: pointer;
 }
 .showModal button:hover {
-  background-color: white;
+  background-color: #F4F4F4;
   transition: 200ms;
 }
 @font-face {
@@ -745,7 +736,7 @@ h3:after {
   margin: 0;
   padding: 0;
   font-family: 'Assistant', sans-serif;
-  color: #414040;
+  color: #333333;
   box-sizing: border-box;
 }
 body {
