@@ -1,0 +1,149 @@
+@import "../tools/mixins.less";
+@import "../tools/colors-and-fonts.less";
+
+.home-projects {
+  .flexCenterColumn();
+  padding: 6rem 2rem;
+}
+
+.project {
+  .flexCenter();
+  margin-bottom: 3rem;
+  border-radius: 5px;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.project:nth-of-type(even) {
+  flex-direction: row-reverse;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.project > * {
+  margin: 1em;
+}
+
+.project-details {
+  .flexCenterColumn();
+  max-width: 800px;
+}
+
+.project-content {
+  padding: 2rem;
+  line-height: 2rem;
+  background-color: @secondary-color;
+  color: @secondary-text-color;
+  border-radius: 25px;
+  border: 3px solid @accent-color;
+  // box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  @media screen and (max-width: 480px) {
+    .flexCenterColumn();
+    text-align: center;
+  }
+}
+
+.project-content h3 {
+  font-size: @small-text;
+  font-family: "Raleway", sans-serif;
+  margin-bottom: 0.5rem;
+}
+
+.project-content h3:after {
+  display: none;
+}
+
+.project button {
+  background: none;
+  color: inherit;
+  border: none;
+  .flexCenter();
+  padding: 0.5rem;
+  margin: 8px;
+  background-color: @secondary-color;
+  border-radius: 10px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.project button:hover {
+  transition: 200ms;
+  transform: translateY(-2px);
+  opacity: 80%;
+}
+
+.project a {
+  text-decoration: none;
+}
+
+.project button .button-icon {
+  height: 1.5rem;
+  margin-left: 0.25rem;
+  opacity: 60%;
+}
+
+.project-tools {
+  display: flex;
+  flex-wrap: wrap;
+  @media screen and (max-width: 480px) {
+    .flexCenter();
+  }
+}
+
+.tool {
+  background-color: @accent-color;
+  color: @primary-text-color;
+  font-weight: bold;
+  margin: 0.5rem;
+  padding: 0 0.5rem;
+  border-radius: 500px;
+}
+
+.project-image img {
+  width: 100%;
+  max-width: 800px;
+  flex: 1 1 0;
+  @media screen and (max-width: 768px) {
+    margin: -2rem 0;
+  }
+}
+
+.project-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  @media screen and (max-width: 480px) {
+    .flexCenterColumn();
+  }
+}
+
+.animate-image-right {
+  animation-duration: 1.5s;
+  animation-name: animate-image-right;
+}
+
+.animate-image-left {
+  animation-duration: 1.5s;
+  animation-name: animate-image-left;
+}
+
+@keyframes animate-image-left {
+  0% {
+    transform: translateX(150px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes animate-image-right {
+  0% {
+    transform: translateX(-150px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
