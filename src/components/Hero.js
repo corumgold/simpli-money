@@ -4,8 +4,8 @@ const Hero = () => {
   return (
     <section className="hero">
       <div className="intro">
-        <h1>Gold Standard</h1>
-        <h2 className="big-header">Dog Training</h2>
+        <h1>Simpli Money</h1>
+        <h2 className="big-header">Holistic Financial Consulting</h2>
         <p>
           Bringing <span>joy</span> and <span>peace</span>
         </p>

@@ -17,12 +17,12 @@ const Review = ({ review }) => {
             : "project-image"
         }
       >
-        <img
+        {/* <img
           ref={imageRef}
           id="proj-image"
           src={review.image}
           alt={review.altText}
-        />
+        /> */}
       </div>
       <div className="project-details">
         <div className="project-content">

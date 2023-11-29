@@ -22,7 +22,7 @@ const Nav = () => {
 
   return (
     <nav className="navbar">
-      <div className="brand-title">Gold Standard</div>
+      <div className="brand-title">Simpli Money</div>
       <ul className={burgerClicked ? "nav-links nav-active" : "nav-links"}>
         <li onClick={handleBurger}>
           <a href="#about">About</a>
@@ -34,7 +34,7 @@ const Nav = () => {
           <a href="#form-page">Contact Us</a>
         </li>
         <li onClick={handleBurger}>
-          <a href="mailto:goldstandard.dog@gmail.com">Email</a>
+          <a href="mailto:goldcorum@gmail.com">Email</a>
         </li>
         <li onClick={handleBurger}>
           <a href="tel:14235092278">Call</a>

@@ -3,57 +3,62 @@ import emailjs from "@emailjs/browser";
 
 const Form = () => {
   const [formInfo, setFormInfo] = useState({
-    humanName: "",
+    fullName: "",
     phone: "",
     email: "",
-    dogName: "",
-    dogAge: "",
-    breed: "",
-    crateTrained: "",
-    bite: "",
-    background: "",
-    heardAboutUs: ""
+    selectedService: "",
+    message: "",
   });
 
   const [modalShown, setModalShown] = useState(false);
+  const [formError, setFormError] = useState("");
 
   function handleFormChange(e) {
-    const key = e.target.name;
-    const value = e.target.value;
-    setFormInfo({ ...formInfo, [key]: value });
-    console.log(formInfo)
+    const { name, value } = e.target;
+    setFormInfo({ ...formInfo, [name]: value });
   }
 
   const form = useRef();
 
+  const validateForm = () => {
+    const { fullName, phone, email, selectedService, message } = formInfo;
+
+    if (!fullName || !phone || !email || !selectedService || !message) {
+      setFormError("Please fill out all fields before submitting.");
+      return false;
+    }
+
+    return true;
+  };
+
   const sendEmail = (e) => {
     e.preventDefault();
 
+    if (!validateForm()) {
+      return;
+    }
+
     emailjs
       .sendForm(
-        "service_w95ec4q",
-        "template_mfem2cb",
+        "service_ks23lca",
+        "template_o9b08e6",
         form.current,
         "fZAPiD238sWdJSnZx"
       )
       .then(
         (result) => {
           setModalShown(
-            "Thank you for submitting your info! We will be in contact with you soon."
+            "Thank you for getting in touch! We will reach out to you soon."
           );
           console.log(result.text);
           setFormInfo({
-            humanName: "",
+            fullName: "",
             phone: "",
             email: "",
-            dogName: "",
-            dogAge: "",
-            breed: "",
-            crateTrained: "",
-            bite: "",
-            background: "",
-            heardAboutUs: ""
+            selectedService: "",
+            message: "",
           });
+          setFormError("");
         },
         (error) => {
           setModalShown(
@@ -69,71 +74,43 @@ const Form = () => {
       <h3>Contact Us</h3>
       <form ref={form} id="consult-form">
         <label>
-          Your name:
-          <input type="text" name="humanName" onChange={handleFormChange} />
+          Your Full Name:
+          <input type="text" name="fullName" onChange={handleFormChange} />
         </label>
         <label>
-          Your email:
+          Your Email:
           <input type="text" name="email" onChange={handleFormChange} />
         </label>
         <label>
-          Your phone number:
+          Your Phone Number:
           <input type="text" name="phone" onChange={handleFormChange} />
         </label>
-        <label>
-          Your dog's name:
-          <input type="text" name="dogName" onChange={handleFormChange} />
-        </label>
-        <label>
-          {formInfo.dogName ? formInfo.dogName : "Your dog"}'s age:
-          <input type="text" name="dogAge" onChange={handleFormChange} />
-        </label>
-        <label>
-          {formInfo.dogName ? formInfo.dogName : "Your dog"}'s breed:
-          <input type="text" name="breed" onChange={handleFormChange} />
-        </label>
-        <label>
-          Is {formInfo.dogName ? formInfo.dogName : "your dog"} crate trained?:{" "}
+        <label style={{ display: "flex", flexDirection: "column" }}>
+          Service Most Interested In:
           <select
-            defaultValue={"default"}
-            name="crateTrained"
+            name="selectedService"
+            value={formInfo.selectedService}
             onChange={handleFormChange}
           >
-            <option value="default" disabled></option>
-            <option value="yes">Yes</option>
-            <option value="no">No</option>
+            <option value="" disabled>
+              Select a service
+            </option>
+            <option value="Retirement Planning">Retirement Planning</option>
+            <option value="Debt Management">Debt Management</option>
+            <option value="Budgeting">Budgeting</option>
           </select>
         </label>
         <label>
-          Has {formInfo.dogName ? formInfo.dogName : "your dog"} ever bitten
-          anyone? (it's okay if so!):{" "}
-          <select
-            defaultValue={"default"}
-            name="bite"
+          Message:
+          <textarea
+            style={{ width: "100%" }}
+            type="text"
+            name="message"
             onChange={handleFormChange}
-          >
-            <option value="default" disabled></option>
-            <option value="yes">Yes</option>
-            <option value="no">No</option>
-          </select>
-        </label>
-        {formInfo.bite === "yes" ? (
-          <label>
-            Tell us a bit more about{" "}
-            {formInfo.dogName ? formInfo.dogName : "your dog"}
-            's bite history:
-            <input type="text" name="biteDetails" onChange={handleFormChange} />
-          </label>
-        ) : null}
-        <label>
-          How did you hear about us?:
-          <input type="text" name="heardAboutUs" onChange={handleFormChange} />
-        </label>
-        <label>
-          Anything else?
-          <textarea style={{width: "100%"}} type="text" name="background" onChange={handleFormChange} />
+          />
         </label>
         <button onClick={sendEmail}>Submit Form</button>
+        {formError && <p style={{ color: "red" }}>{formError}</p>}
       </form>
       <div className={modalShown ? "showModal" : "noModal"}>
         {modalShown}
