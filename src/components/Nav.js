@@ -22,7 +22,10 @@ const Nav = () => {
 
   return (
     <nav className="navbar">
-      <div className="brand-title">Simpli Money</div>
+      <div className="brand-title">
+        {" "}
+        <a href="#hero">Simpli Money</a>{" "}
+      </div>
       <ul className={burgerClicked ? "nav-links nav-active" : "nav-links"}>
         <li onClick={handleBurger}>
           <a href="#about">About</a>

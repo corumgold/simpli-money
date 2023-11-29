@@ -20,7 +20,7 @@ const Footer = () => {
         </a>
         <a
           target="_blank"
-          href="https://www.instagram.com/goldstandarddog/"
+          href="https://www.instagram.com/simpli.money/"
           rel="noreferrer"
         >
           <img
