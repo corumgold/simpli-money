@@ -25,12 +25,16 @@
 .hero p {
   font-size: 3rem;
   font-family: "Raleway", sans-serif;
-  max-width: 700px;
   animation: slideUp 1.5s;
 }
 @media screen and (max-width: 1200px) {
   .hero p {
     font-size: 2rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .hero p {
+    max-width: 300;
   }
 }
 .intro span {

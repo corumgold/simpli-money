@@ -7,12 +7,7 @@ const Hero = () => {
         <h1>Simpli Money</h1>
         <h2 className="big-header">Holistic Financial Consulting</h2>
         <p>
-          Bringing <span>joy</span> and <span>peace</span>
-        </p>
-        <p>into the lives of</p>
-        <p>
-          <span>you</span> and your <span>dog</span>.
-        </p>
+          <span>Harmony</span> in Finance. <span>Wellness</span> in Life.</p>
       </div>
     </section>
   );
