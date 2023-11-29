@@ -32,11 +32,6 @@
     font-size: 2rem;
   }
 }
-@media screen and (max-width: 600px) {
-  .hero p {
-    max-width: 300;
-  }
-}
 .intro span {
   color: #00A3A3;
   font-weight: bold;
@@ -326,15 +321,15 @@ h3:after {
     flex-direction: column;
   }
 }
-.animate-image-right {
+.animate-review-right {
   animation-duration: 1.5s;
-  animation-name: animate-image-right;
+  animation-name: animate-review-right;
 }
-.animate-image-left {
+.animate-review-left {
   animation-duration: 1.5s;
-  animation-name: animate-image-left;
+  animation-name: animate-review-left;
 }
-@keyframes animate-image-left {
+@keyframes animate-review-left {
   0% {
     transform: translateX(150px);
   }
@@ -342,7 +337,7 @@ h3:after {
     transform: translateX(0);
   }
 }
-@keyframes animate-image-right {
+@keyframes animate-review-right {
   0% {
     transform: translateX(-150px);
   }

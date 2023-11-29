@@ -2,37 +2,26 @@ import React from "react";
 import { useInView } from "react-intersection-observer";
 
 const Review = ({ review }) => {
-  const { ref: imageRef, inView: imageVisible } = useInView({
+  const { ref: reviewRef, inView: reviewVisible } = useInView({
     triggerOnce: true,
   });
 
   return (
-    <div className="project">
-      <div
-        className={
-          imageVisible
-            ? review.id % 2 === 0
-              ? "animate-image-left project-image"
-              : "animate-image-right project-image"
-            : "project-image"
-        }
-      >
-        {/* <img
-          ref={imageRef}
-          id="proj-image"
-          src={review.image}
-          alt={review.altText}
-        /> */}
-      </div>
+    <div
+      ref={reviewRef}
+      className={
+        reviewVisible
+          ? review.id % 2 === 0
+            ? "animate-review-left project"
+            : "animate-review-right project"
+          : "project"
+      }
+    >
+      {" "}
       <div className="project-details">
         <div className="project-content">
-          <h3>{review.title}</h3>
-          <p>&#8220;{review.description}&#8221; &mdash; {review.title}'s {review.parent}</p>
-          <div className="project-tools">
-            {review.tools.map((tool) => {
-              return <p className="tool">{tool}</p>;
-            })}
-          </div>
+          <h3>{review.name}</h3>
+          <p>{review.message}</p>
         </div>
       </div>
     </div>
